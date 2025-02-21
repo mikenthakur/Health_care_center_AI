@@ -3,45 +3,65 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog Post</title>
+    <title>Building a Symptom-Based Disease Diagnosis Web App with Flask and Machine Learning</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- For icons -->
   </head>
   <body>
-    <div class="container my-4 mt-4">
 
-        <h2 class="text-center"> Building a Symptom-Based Disease Diagnosis Web App with Flask and Machine Learning</h2>
-        <p>In the age of technology and information, access to accurate and timely healthcare is more critical than ever. With the increasing importance of remote healthcare solutions, we embarked on a journey to develop a symptom-based disease diagnosis web application. Leveraging Flask for the backend and a Decision Tree Classifier model, we created a user-friendly platform that can help users identify potential illnesses based on their reported symptoms.</p>
+    <div class="container my-4">
 
+      <!-- Blog Header -->
+      <header class="text-center mb-5">
+        <h2 class="display-4 text-primary">Building a Symptom-Based Disease Diagnosis Web App with Flask and Machine Learning</h2>
+        <p class="lead text-muted">Leveraging technology to improve healthcare accessibility through AI-powered predictions.</p>
+      </header>
+
+      <!-- Problem Section -->
+      <section class="mb-5">
         <h3>The Problem</h3>
-        <p>The project began with recognizing a common issue: people often experience symptoms and want quick answers about their health concerns. It can be challenging to differentiate between various diseases, especially when symptoms overlap. Our goal was to provide a convenient solution for users to input their symptoms and receive potential diagnoses.</p>
+        <p>In today’s fast-paced world, people are often uncertain about their health and symptoms. It can be difficult to identify the root cause of illness without proper guidance. Our goal was to create a solution that helps users identify potential illnesses quickly based on the symptoms they experience.</p>
+      </section>
 
+      <!-- Solution Section -->
+      <section class="mb-5">
         <h3>The Solution</h3>
-        <p>We developed a web app that allows users to enter a list of symptoms they are experiencing. The app then uses a pre-trained Decision Tree Classifier model to predict the most likely disease based on the provided symptoms. Here's how it works:</p>
+        <p>We built a web app that takes user-inputted symptoms and uses a pre-trained machine learning model to predict the most likely disease. The app simplifies the process of identifying illnesses by combining AI with user-friendly design. Here’s how it works:</p>
 
         <ol>
-            <li><b><strong>Symptom Input:</strong></b> Users enter their symptoms through a user-friendly interface. The web app supports a wide range of symptoms, making it versatile for different scenarios.</li>
-            <li><b><strong>Machine Learning Model:</strong></b> We trained a Decision Tree Classifier using a dataset containing symptoms and corresponding diseases. The model is capable of predicting diseases based on input symptoms.</li>
-            <li><b><strong>Prediction:</strong></b> The app uses the model to predict the most likely disease, providing users with instant information about potential health concerns.</li>
-            <li><b><strong>Additional Information: </strong></b> To enhance user experience, the app also provides additional information about the predicted disease. This includes a description of the disease, recommended precautions, medications, dietary advice, and workout tips.</li>
-
+          <li><strong>Symptom Input:</strong> Users enter their symptoms through a simple and intuitive interface.</li>
+          <li><strong>Machine Learning Model:</strong> The app uses a Decision Tree Classifier model trained on a vast dataset of symptoms and diseases.</li>
+          <li><strong>Prediction:</strong> The model predicts the most likely disease based on the symptoms entered.</li>
+          <li><strong>Additional Information:</strong> The app provides useful information on the predicted disease, including descriptions, precautions, medications, and lifestyle recommendations.</li>
         </ol>
+      </section>
 
+      <!-- Key Features Section -->
+      <section class="mb-5">
         <h3>Key Features</h3>
-        <ul type="circle">
-            <li><b><strong>User-Friendly Interface:</strong></b> The web app boasts an intuitive and easy-to-navigate interface, ensuring that users can input their symptoms without any hassle.</li>
-            <li><b><strong>Accurate Predictions:</strong></b> Leveraging machine learning, our model provides accurate disease predictions based on the symptoms provided by the user.</li>
-            <li><b><strong>Comprehensive Information: </strong></b>In addition to predictions, the app offers comprehensive information about the predicted disease, including descriptions, precautions, medications, diet recommendations, and workout tips.</li>
-            <li><b><strong>ducational Content:</strong></b> To empower users with knowledge, the app includes informative blog posts about various health topics.</li>
+        <ul class="list-group">
+          <li class="list-group-item"><strong>User-Friendly Interface:</strong> Simple, clean, and easy to use.</li>
+          <li class="list-group-item"><strong>Accurate Predictions:</strong> Powered by a trained machine learning model.</li>
+          <li class="list-group-item"><strong>Comprehensive Information:</strong> Provides additional information on the predicted diseases.</li>
+          <li class="list-group-item"><strong>Educational Content:</strong> Includes informative blog posts on health topics to empower users with knowledge.</li>
         </ul>
+      </section>
 
-        <br>
-
+      <!-- Conclusion Section -->
+      <section>
         <h3>Conclusion</h3>
-        <p>Our Symptom-Based Disease Diagnosis Web App brings the power of machine learning and healthcare information to the fingertips of users. It serves as a valuable resource for individuals looking to gain insights into their health conditions quickly and conveniently. By combining technology and healthcare, we aim to make healthcare more accessible and user-centric.
+        <p>Our Symptom-Based Disease Diagnosis Web App merges healthcare with technology to provide users with quick, reliable information about their health. By utilizing machine learning and artificial intelligence, we aim to make healthcare more accessible and user-friendly. This tool empowers individuals to better understand their health, take proactive measures, and improve their well-being.</p>
+        <p>In an era where telemedicine and remote healthcare are becoming increasingly essential, this web app is a step forward in making healthcare information easily accessible to everyone. With this project, we hope to contribute to a healthier, more informed world.</p>
+      </section>
 
-In an era where remote healthcare solutions are gaining prominence, this project represents a significant step forward in providing accessible and reliable healthcare information to the masses. We hope that this project will contribute to better health awareness and ultimately improve the well-being of individuals worldwide.</p>
+      <!-- Author Info (Optional) -->
+      <footer class="text-center mt-5">
+        <p class="text-muted">Written by <strong>Miken Thakur</strong></p>
+        <p class="text-muted">Follow me on <a href="https://github.com/mikenthakur" target="_blank" class="text-dark"><i class="fab fa-github"></i> GitHub</a> | <a href="https://linkedin.com/in/mikenthakur" target="_blank" class="text-dark"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+      </footer>
 
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
