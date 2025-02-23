@@ -1,60 +1,291 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Miken Thakur - Developer Profile</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- For social icons -->
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miken Thakur - AI/ML Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2A5C82;
+            --secondary-color: #4CAF50;
+            --accent-color: #FF6B6B;
+            --dark-bg: #1a1a1a;
+        }
 
-    <div class="container my-5">
-      <!-- Header Section -->
-      <div class="text-center mb-5">
-        <h1 class="display-4 text-primary">Meet the Developer</h1>
-        <p class="lead text-muted">Hi, I'm Miken Thakur, a passionate Software Engineering student with a love for AI and ML.</p>
-      </div>
+        body {
+            background: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+        }
 
-      <!-- Developer Info Section -->
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{{ url_for('static', filename='miken.jpg') }}" class="card-img-top rounded-circle img-fluid w-50" alt="Miken Thakur">
-            <div class="card-body">
-              <h5 class="card-title">Miken Thakur</h5>
-              <p class="card-text">AI & Machine Learning Engineer | Software Engineering Student</p>
-              <a href="https://linkedin.com/in/mikenthakur" class="btn btn-outline-primary btn-sm" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-              </a>
-              <a href="https://github.com/mikenthakur" class="btn btn-outline-dark btn-sm" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-              </a>
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), #1a365d);
+            padding: 4rem 0;
+            color: white;
+            margin-bottom: 4rem;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border: 4px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin: 5px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(42,92,130,0.3);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .animated-entry {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <img src="{{ url_for('static', filename='miken.jpg') }}"
+                         class="profile-img rounded-circle mb-4 animated-entry"
+                         alt="Miken Thakur">
+                    <h1 class="display-4 mb-3 animated-entry">Miken Thakur</h1>
+                    <p class="lead mb-4 animated-entry" style="animation-delay: 0.2s;">
+                        AI & Machine Learning Engineer | Healthcare Innovator
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 animated-entry" style="animation-delay: 0.4s;">
+                        <a href="https://linkedin.com/in/mikenthakur"
+                           class="social-icon bg-primary text-white"
+                           target="_blank">
+                            <i class="fab fa-linkedin-in fa-lg"></i>
+                        </a>
+                        <a href="https://github.com/mikenthakur"
+                           class="social-icon bg-dark text-white"
+                           target="_blank">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="{{ url_for('static', filename='kp.png') }}"
+                         class="profile-img rounded-circle mb-4 animated-entry"
+                         alt="Krishna Gaderi">
+                    <h1 class="display-4 mb-3 animated-entry">Krishna Gaderi</h1>
+                    <p class="lead mb-4 animated-entry" style="animation-delay: 0.2s;">
+                        AI & Software Developer | Innovator
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 animated-entry" style="animation-delay: 0.4s;">
+                        <a href="https://linkedin.com/in/krishnagaderi"
+                           class="social-icon bg-primary text-white"
+                           target="_blank">
+                            <i class="fab fa-linkedin-in fa-lg"></i>
+                        </a>
+                        <a href="https://github.com/krishnagaderi"
+                           class="social-icon bg-dark text-white"
+                           target="_blank">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Main Content -->
+        <div class="row g-5">
+            <!-- Skills & Education -->
+            <div class="col-lg-4">
+                <div class="section-card p-4 mb-4 animated-entry">
+                    <h4 class="mb-4">Technical Arsenal</h4>
+                    <div class="skill-badge">Machine Learning</div>
+                    <div class="skill-badge">Deep Learning</div>
+                    <div class="skill-badge">Python</div>
+                    <div class="skill-badge">TensorFlow</div>
+                    <div class="skill-badge">Healthcare AI</div>
+                    <div class="skill-badge">Cloud Computing</div>
+                </div>
+
+                <div class="section-card p-4 animated-entry" style="animation-delay: 0.2s;">
+                    <h4 class="mb-4">Education</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h5>BSc Software Engineering</h5>
+                            <p class="text-muted">University of XYZ</p>
+                            <small>2020-2024</small>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>AI Specialization</h5>
+                            <p class="text-muted">Stanford Online</p>
+                            <small>2022</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bio & Experience -->
+            <div class="col-lg-8">
+                <div class="section-card p-5 mb-4 animated-entry">
+                    <h3 class="mb-4">Building the Future of Healthcare</h3>
+                    <p class="lead text-muted mb-4">
+                        Passionate about creating AI solutions that make healthcare accessible and intelligent
+                    </p>
+
+                    <div class="mb-5">
+                        <h5 class="mb-3">🚀 Professional Journey</h5>
+                        <p>With 5+ years in AI development, I've led international teams in creating healthcare solutions that impact millions. My work focuses on bridging the gap between cutting-edge technology and real-world medical applications.</p>
+                    </div>
+
+                    <div class="mb-5">
+                        <h5 class="mb-3">💡 Innovation Philosophy</h5>
+                        <p>Believe in creating technology that's both powerful and accessible. Every line of code should serve the dual purpose of solving complex problems while remaining human-centric in its approach.</p>
+                    </div>
+
+                    <div class="mb-5">
+                        <h5 class="mb-3">🌍 Global Impact</h5>
+                        <p>From collaborating with medical professionals in Europe to deploying AI models in South Asian clinics, my work spans continents with a singular focus - making quality healthcare universally accessible.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="#contact" class="btn btn-primary btn-lg px-5">
+                            Let's Connect <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Bio Section -->
-        <div class="col-md-8">
-          <h5>About Me</h5>
-          <p>Hello, I'm Miken Thakur, your AI and Machine Learning Engineer with over 5 years of experience in the field. I am passionate about harnessing the power of technology to make a positive impact on people's lives. Allow me to share a bit about my journey in the world of artificial intelligence and machine learning.</p>
-
-          <h5>My Expertise</h5>
-          <p>With a strong academic background in computer science and a deep fascination for AI and ML, I embarked on a journey that has taken me across the globe, working on diverse and innovative projects. Over the years, I've had the privilege of collaborating on international projects that have pushed the boundaries of what's possible in AI and ML.</p>
-
-          <h5>A Commitment to Excellence</h5>
-          <p>My work is driven by a commitment to excellence and a belief that technology should be accessible and beneficial to everyone. Whether it's developing predictive models, creating intelligent algorithms, or designing user-friendly interfaces, I strive for solutions that are both cutting-edge and user-centric.</p>
-
-          <h5>Passion for Health Tech</h5>
-          <p>The development of [Your Website Name] represents a convergence of my passion for AI and my dedication to improving healthcare accessibility. I believe that AI has the potential to transform the way we approach healthcare, making it more personalized and informative. This platform is a testament to that vision.</p>
-
-          <h5>Join Me on this Journey</h5>
-          <p>I invite you to explore [Your Website Name] and experience firsthand the fusion of AI and healthcare. Together, we can empower individuals with knowledge, promote well-being, and contribute to a brighter and healthier future.</p>
+        <!-- Featured Projects -->
+        <div class="row mt-5 animated-entry" style="animation-delay: 0.4s;">
+            <div class="col-12">
+                <h3 class="mb-4">Signature Projects</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="section-card p-4 h-100">
+                            <div class="icon-circle bg-primary text-white mb-3">
+                                <i class="fas fa-heartbeat fa-2x"></i>
+                            </div>
+                            <h5>HealthAI Diagnostic</h5>
+                            <p class="text-muted">ML-powered diagnostic system with 95% accuracy</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="section-card p-4 h-100">
+                            <div class="icon-circle bg-success text-white mb-3">
+                                <i class="fas fa-brain fa-2x"></i>
+                            </div>
+                            <h5>NeuroTrack</h5>
+                            <p class="text-muted">Real-time neurological pattern analysis</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="section-card p-4 h-100">
+                            <div class="icon-circle bg-danger text-white mb-3">
+                                <i class="fas fa-dna fa-2x"></i>
+                            </div>
+                            <h5>GenoML</h5>
+                            <p class="text-muted">Genomic sequence prediction framework</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animation trigger
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        });
+
+        document.querySelectorAll('.animated-entry').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
 </html>
